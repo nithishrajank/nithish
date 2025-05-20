@@ -1,0 +1,19 @@
+<div class="layout">
+  <div class="heading">
+    <h5>{{ head.title }}</h5>
+    <img
+      src="https://content.api.news/v3/images/bin/7fb8522d275a99adfaa6e642ea23fa83?width=316"
+    />
+    <h2>
+      <a [href]="head.link" target="_blank">{{ head.headline }}</a>
+    </h2>
+  </div>
+  <div class="articles" *ngFor="let a of articles">
+    <h5>{{ a.thumbnail.title }}</h5>
+    <h2><a [href]="a.link" target="_blank">{{ a.headline }}</a></h2>
+    <div class="art">
+      <img src="{{ a.thumbnail.src }}" />
+      <p>{{a.standfirst}}</p>
+    </div>
+  </div>
+</div>
